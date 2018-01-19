@@ -12,6 +12,10 @@ class EratosthenesTest(unittest.TestCase):
         self.assertEqual(euler.eratosthenes(0), [])
         self.assertEqual(euler.eratosthenes(-1), [])
 
+    def test_noninteger(self):
+        self.assertRaises(TypeError, euler.eratosthenes, 5.5)
+        self.assertRaises(TypeError, euler.eratosthenes, 5.)
+
 class UniquePrimeFactorsTest(unittest.TestCase):
     def test_small_values(self):
         self.assertEqual(euler.unique_prime_factors(50), [2,5])
@@ -24,6 +28,10 @@ class UniquePrimeFactorsTest(unittest.TestCase):
         self.assertEqual(euler.unique_prime_factors(-1), [])
         self.assertEqual(euler.unique_prime_factors(-10), [])
 
+    def test_noninteger(self):
+        self.assertRaises(TypeError, euler.unique_prime_factors, 5.5)
+        self.assertRaises(TypeError, euler.unique_prime_factors, 5.)
+
 class PrimeFactorsTest(unittest.TestCase):
     def test_small_values(self):
         self.assertEqual(euler.prime_factors(50), [2,5,5])
@@ -35,6 +43,10 @@ class PrimeFactorsTest(unittest.TestCase):
         self.assertEqual(euler.prime_factors(0), [])
         self.assertEqual(euler.prime_factors(-1), [])
         self.assertEqual(euler.prime_factors(-10), [])
+
+    def test_noninteger(self):
+        self.assertRaises(TypeError, euler.prime_factors, 5.5)
+        self.assertRaises(TypeError, euler.prime_factors, 5.)
 
 class TrialDivisionTest(unittest.TestCase):
     def test_small_values(self):

@@ -31,6 +31,7 @@ def unique_prime_factors(n):
 
     return filter(lambda factor: n % factor == 0, primes)
 
+
 def prime_factors(n):
     """Returns a list of the prime factors of a number using Eratosthenes' Sieve and trial division."""
 
